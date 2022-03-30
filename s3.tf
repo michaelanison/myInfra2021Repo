@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "my-s3-bucket" {
+resource "aws_s3_bucket" "my-jenkins-terraform-bucket" {
   bucket_prefix = var.bucket_prefix
   acl = var.acl
   
