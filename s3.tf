@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my-tf-s3-project1" {
-  bucket = "example-bucket-tf s3-project1"
+  bucket = "my-tf-s3-project1"
 }
 
 resource "aws_s3_bucket_acl" "my-tf-s3-project1" {
