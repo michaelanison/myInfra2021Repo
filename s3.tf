@@ -1,17 +1,7 @@
-resource "aws_s3_bucket" "my-jenkins-terraform-bucket2" {
+resource "aws_s3_bucket" "bucket" {
+  bucket        = var.bucket
   bucket_prefix = var.bucket_prefix
   acl = var.acl
-  
-   
-  
-  resource "aws_s3_bucket_versioning" "example" {
-  bucket = aws_s3_bucket.example.id
-
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
-  
   versioning {
     enabled = var.versioning
   }
@@ -19,12 +9,3 @@ resource "aws_s3_bucket" "my-jenkins-terraform-bucket2" {
   tags = var.tags
 }
 
-
-
-resource "aws_s3_bucket_versioning" "example" {
-  bucket = aws_s3_bucket.example.id
-
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
